@@ -84,7 +84,7 @@
             appendLoader($this);
           }
           resizing = true;
-          packTimeout = setTimeout($this[0]._stalactite.packTimeout, 2000);
+          packTimeout = setTimeout($this[0]._stalactite.packTimeout, options.delay);
         };
         $(window).bind('resize', this._stalactite.resize);
         this._stalactite.listening = true;
@@ -302,6 +302,7 @@
 
   $.fn.stalactite.defaultOptions = {
     duration: 150,
+    delay: 2000,
     easing: 'swing',
     cssPrefix: '.stalactite',
     cssPrep: true,
